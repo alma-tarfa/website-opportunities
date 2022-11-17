@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using OpportunitiesDraft1.Models
+@using OpportunitiesDraft1.Services
+@inject JsonFileScheduledEvents EventService
+
+
+@foreach (var evt in EventService.GetScheduledEvents())
+{
+    <div class="card flex-row m-5 h-50" style="background: @evt.BackgroundColor; color:#47525e">
+            <div class="m-2" style="width:400px;">
+                <img class="card-img" src="@evt.ImageUrl" />
+            </div>
+            <div class="ml-2 mt-2">
+
+                <div class="card-title boldText">@evt.Title</div>
+                <div class="card-subtitle">@evt.Dates</div>
+                <div class="card-body">
+                    <div class="card-text">@evt.Description</div>
+                    <a href="@evt.Link" class="btn btn-dark mt-5">Get Tickets</a>
+                </div>
+            </div>
+
+    </div>
+}

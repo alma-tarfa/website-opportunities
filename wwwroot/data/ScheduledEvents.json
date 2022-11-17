@@ -1,0 +1,20 @@
+[
+  {
+    "Id": "SE-1",
+    "Title": "The Opportunities",
+    "Dates": "22-24 October",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, p.",
+    "ImageUrl": "https://images.pexels.com/photos/3769714/pexels-photo-3769714.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    "Link": "#",
+    "BackgroundColor":"#AA7364"
+  },
+  {
+    "Id": "SE-2",
+    "Title": "Women in Media and Tech in Ireland",
+    "Dates": "1 November",
+    "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, p.",
+    "ImageUrl": "https://images.pexels.com/photos/320617/pexels-photo-320617.jpeg?auto=compress&cs=tinysrgb&h=650&w=940",
+    "Link": "#",
+    "BackgroundColor": "#557B97"
+  }
+]
