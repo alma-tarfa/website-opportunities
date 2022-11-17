@@ -1,0 +1,97 @@
+﻿@model OpportunitiesDraft1.ViewModels.RegisterViewModelPartner
+@{
+    ViewBag.Title = "Create Account";
+}
+
+
+<div style="position:relative; top:80px;">
+    <div class="card mx-auto login-container">
+        <div class="card-header text-center boldText">I am a Partner</div>
+        <h5 class="card-title "></h5>
+        <div class="card-body login-container">
+            <form asp-controller="Account" asp-action="RegisterPartner" method="post">
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <input class="login-input" asp-for="Name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input class="login-input" asp-for="Company" placeholder="Company">
+                </div>
+                <div class="form-group">
+                    <input class="login-input" asp-for="PhoneNumber" placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <input class="login-input" asp-for="Email" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input class="login-input" asp-for="Password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label class="boldText">Interest</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="Mentorship" value="true" id="Mentorship">
+                        <label class="form-check-label" asp-for="Mentorship">
+                            Mentorship
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="StartUp" value="true" id="StartUp">
+                        <label class="form-check-label" asp-for="StartUp">
+                            Start-up Accelerations
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="Partnership" value="true" id="Partnership">
+                        <label class="form-check-label" asp-for="Partnership">
+                            Partnerships
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="Sponsorship" value="true" id="Sponsorship">
+                        <label class="form-check-label" asp-for="Sponsorship">
+                            Sponsorships
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="BusinessOpportunities" value="true" id="BusinessOpportunities">
+                        <label class="form-check-label" asp-for="BusinessOpportunities">
+                            Business Opportunities
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="AllyShip" value="true" id="AllyShip">
+                        <label class="form-check-label" asp-for="AllyShip">
+                            AllyShip
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkPlacement" value="true" id="WorkPlacement">
+                        <label class="form-check-label" asp-for="WorkPlacement">
+                            Work Placement
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="JobOpportunities" value="true" id="JobOpportunities">
+                        <label class="form-check-label" asp-for="JobOpportunities">
+                            Job Opportunities
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" asp-for="WorkshopTraining" value="true" id="WorkshopTraining">
+                        <label class="form-check-label" asp-for="WorkshopTraining">
+                            Workshops / Training Opportunities
+                        </label>
+                    </div>
+
+                </div>
+                <div class="form-group mt-3">
+                    <label class="boldText" asp-for="AdditionalMessage">Additional Message</label>
+                    <textarea asp-for="AdditionalMessage" class="form-control" id="asp-for=" AdditionalMessage"" rows="5"></textarea>
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-dark">Submit</button></div>
+            </form>
+
+        </div>
+    </div>
+</div>

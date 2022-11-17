@@ -1,0 +1,78 @@
+﻿@model OpportunitiesDraft1.ViewModels.ContactViewModel
+@{
+    ViewBag.Title = "Contact Us";
+}
+
+
+<div style="position:relative; top:80px;">
+   
+    <div class="card mx-auto login-container">
+        <div class="card-header text-center boldText">Contact Us</div>
+        <h5 class="card-title "></h5>
+        <div class="card-body login-container">
+            <p>
+                Do you have questions about Opportunitees?<br />
+                Please fill the form and our team will respond to your query.<br />
+                Subsequently, you can conatct us with the details below.
+            </p>
+            <div class="card p-3" style="width: 25rem;">
+                <div class="card-title boldText">Contact Details</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col boldText">
+                            Phone:
+                        </div>
+                        <div class="col">
+                            041-9842740<br />
+                            083-1458387
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col boldText">
+                            Email:
+                        </div>
+                        <div class="col">
+                            hello@opportunitees.ie
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form asp-controller="Home" asp-action="Contact" method="post">
+
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <div class="form-group">
+                    <input class="login-input" asp-for="Name" placeholder="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <input class="login-input" asp-for="Email" placeholder="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input class="login-input" asp-for="PhoneNumber" placeholder="Phone Number">
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label class="boldText" asp-for="Interest">Interest</label>
+
+                    <select class="form-control" asp-for="Interest" id="Interest">
+                        <option>Partnership Enquires</option>
+                        <option>I am an Opportunist</option>
+                        <option>BAME</option>
+                        <option>Advertising</option>
+                        <option>Information</option>
+                        <option>Other</option>
+
+                    </select>
+                </div>
+                <div class="form-group mt-3">
+                    <label class="boldText" asp-for="Message">Message</label>
+                    <textarea asp-for="Message" class="form-control" id="Message" rows="5"></textarea>
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-dark">Submit</button></div>
+            </form>
+
+        </div>
+    </div>
+</div>

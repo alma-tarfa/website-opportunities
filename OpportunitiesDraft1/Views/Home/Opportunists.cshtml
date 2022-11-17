@@ -1,0 +1,64 @@
+﻿@using OpportunitiesDraft1.Models
+@using OpportunitiesDraft1.Services
+@inject JsonFileFeaturedOpportunists Opportunists
+
+
+
+<div class="OpportunistHome">
+    <div class="VideoHeading OpportunistHomeSection">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="/Images/OpportunistVideo.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100 mt-5 align-middle">
+            <div class="flex-column justify-content-end w-50 text-center align-items-right ml-auto my-auto">
+                <div class="w-100 text-white" >
+                    <h4 class="display-3" >Opportunists</h4>
+                    <p class="lead mb-0"> Opportunists are given a platform to access opportunities that they would have been deemed inaccessible. They are encouraged to share their ideas, innovations, crafts and talents.</p>
+                </div>
+                <div class="card w-75 mt-5 mx-auto">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Ready to become an Opportunist</h5>
+                        <button class="btn btn-dark" onclick="location.href='@Url.Action("RegisterOpportunist", "Account")'">Join Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  
+<div style="position:relative;bottom:0;">
+    @foreach (var opp in Opportunists.GetFeaturedOpportunists())
+    {
+        <div class="OpportunistHomeSection">
+            <div class="card">
+                <div class="row my-2">
+                    <div class="col mx-auto ml-2"><div class="mx-auto" style="height:315px; width:420px;"><img class="ImageStyle fitImage" src="@opp.ImageUrl" alt="Profile Image"></div></div>
+                    <div class="text-center col ml-2">
+                        <iframe width="420" height="315"
+                                src="@opp.VideoUrl" frameborder="0" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <div class="">
+                        <div class="card-body text-right">
+
+                            <h5 class="card-title mt-3">@opp.Name</h5>
+                            <h6 class="card-subtitle">@opp.Title</h6>
+                            <p class="card-text">
+                                @opp.Description
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    }
+</div>
+
+</div>
+
+

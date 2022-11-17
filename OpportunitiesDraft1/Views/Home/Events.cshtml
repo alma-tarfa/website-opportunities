@@ -1,0 +1,34 @@
+﻿@*@page*@
+@*@model ScheduledEvents*@
+@model OpportunitiesDraft1.ViewModels.NewsletterViewModel
+@using OpportunitiesDraft1.Components
+
+@{
+    ViewBag.Title = "Events";
+}
+
+
+
+<div class="OpportunistHome">
+    <div class="OpportunistHomeVideo">
+        <div class="SupportersMainImage"><img src="/Images/Events.jpeg" class="img-sup" alt="event"></div>
+        <div class="BameTextContainer mx-auto">
+            <div class="m-5 p-2 SupporterMainText">
+                <div class="card" style="background: #C0C0C0; font-size:18px; color:#47525e">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Want to stay up to date with our latest news and events</h5>
+                        <button class="btn btn-dark mt-4" onclick="location.href='@Url.Action("Newsletter", "home")'">
+                            Subscribe to our NewsLetter
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    @* @(await Html.RenderComponentAsync<Events>(RenderMode.ServerPrerendered))*@
+
+</div>
+
+
+<script src="_framework/blazor.server.js"></script>
