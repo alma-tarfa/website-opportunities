@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\almat\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\almat\\.nuget\\packages"
-    ]
-  }
-}
